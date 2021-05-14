@@ -1,0 +1,191 @@
+/* mobile first*/
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    font-family: "Kumbh Sans", sans-serif;
+}
+.outer-container {
+    width: 375px;
+    height: 670px;
+
+    /*padding: 130px 20px ;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    background-image: url(./images/bg-pattern-bottom.svg);
+    background-color: var(--dark-cyan);
+    background-blend-mode: multiply;
+
+    -webkit-box-shadow: 10px 11px 4px -2px #b0b0b0;
+    box-shadow: 10px 11px 4px -2px #b0b0b0;
+}
+
+
+.back-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+}
+
+
+.back-top {
+    /* i was unable to get this right*/
+    flex-basis: 50%;
+
+    background: url(./images/bg-pattern-top.svg) no-repeat;
+    background-size: auto;
+    transform: rotate(180deg);
+}
+.back-bottom {
+    /* i was unable to get this right*/
+    flex-basis: 50%;
+
+    background: url(./images/bg-pattern-bottom.svg) no-repeat;
+}
+.inner-container {
+    /*border: 2px solid green;*/
+    background-color: white;
+    width: 325px;
+    height: 370px;
+    display: flex;
+    border-radius: 1rem;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.inner-container .top {
+    height: 35%;
+    /*border: 2px solid yellow;*/
+    position: relative;
+    background: url(./images/bg-pattern-card.svg);
+}
+
+.inner-container .mid {
+    flex-basis: 40%;
+
+    /*border: 2px solid white;*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.line1 {
+    margin-top: 30px;
+}
+.line2 {
+    margin-top: 10px;
+}
+.line1,
+.b-line1,
+.child1,
+.child2,
+.child3 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+span.age {
+    margin-left: 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.line2 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.child4,
+.child5,
+.child6 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+.b-line2 {
+}
+.inner-container .bottom-v1 {
+    flex-basis: 25%;
+    /*border: 2px solid yellow;*/
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    align-content: center;
+
+    align-items: center;
+}
+
+.inner-container .bottom {
+    border-top: 1px solid var(--dark-gray);
+    flex-basis: 25%;
+    /* border: 2px solid yellow;*/
+    display: flex;
+
+    /*
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    align-content: center;
+
+    align-items: center;
+    */
+
+    flex-wrap: wrap;
+
+    align-content: space-between;
+    padding: 20px;
+}
+
+.inner-container .bottom .child {
+    width: 33%;
+
+    text-align: center;
+}
+
+.picture {
+    background: url(./images/image-victor.jpg);
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    border: 4px solid white;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: 80px;
+}
+
+/*desktop*/
+@media screen and (min-width: 768px) {
+    .outer-container {
+        width: 1440px;
+        height: 720px;
+        /* padding: 170px 540px;*/
+    }
+
+    .back-container {
+        flex-direction: row;
+    }
+}
